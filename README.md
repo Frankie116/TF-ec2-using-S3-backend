@@ -1,5 +1,6 @@
 ----------------------------------------------------------------------------
-# Project: TF-sample-project-using-S3-backend
+
+## Project: TF15-ec2-using-S3-backend
 
 This is a sample project that uses an S3 backend to store the tfstate.
 
