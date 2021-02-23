@@ -1,6 +1,13 @@
-# Input variable definitions
+# ---------------------------------------------------------------------------------------------------
+# version  2.0
+# Library: https://github.com/Frankie116/my-library.git
+# variables used in this project
+# ---------------------------------------------------------------------------------------------------
 
-variable "region" {
+# req:
+# None
+
+variable "my-aws-region" {
     default = "eu-west-2"
 }
 
