@@ -1,18 +1,11 @@
 # ---------------------------------------------------------------------------------------------------
-# version  1.10
+# version  2.0
 # Library: https://github.com/Frankie116/my-library.git
-# Creates an s3 bucket used to store the terraform state for this project
+# Uses an existing s3 bucket to store the terraform state for this project
 # ---------------------------------------------------------------------------------------------------
 
 # req:
-# 9b-random-string.tf - random_string.my-random-string.result
-# variables.tf        - var.my-vpc-cidr-block
-# variables.tf        - var.my-priv-subnet-cidr-blocks
-# variables.tf        - var.my-priv-subnets-per-vpc
-# variables.tf        - var.my-pub-subnet-cidr-blocks
-# variables.tf        - var.my-pub-subnets-per-vpc
-
-
+# none
 
 
 terraform {
@@ -21,6 +14,6 @@ terraform {
         encrypt        = true
         key            = "my-state.tfstate"   
         region         = "eu-west-2"                    # Note: DynamoDB table needs to be created in
-        dynamodb_table = "my-db-tf-state-lock"           # specific region with LockID as primary key
+        dynamodb_table = "my-db-tf-statelock"           # specific region with LockID as primary key
         }
 } 

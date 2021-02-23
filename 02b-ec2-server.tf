@@ -1,12 +1,15 @@
 # ---------------------------------------------------------------------------------------------------
 # version  2.0
 # Library: https://github.com/Frankie116/my-library.git
-# provider details
+# Creates a new ec2 instance
 # ---------------------------------------------------------------------------------------------------
 
 # req:
-# # variables.tf           - var.my-aws-region
+# local modules are required.
 
-provider "aws" {
-  region = var.my-aws-region
+
+module "my-server" {
+  source = "../../my-library/terraform-code/modules/ec2"
+  count = 2
+  my-tag-name = "my-server"
 }
